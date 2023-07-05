@@ -1,0 +1,255 @@
+.navbar {
+    overflow: hidden;
+    background-color: hwb(17 96% 1% / 0.35);
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 100;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.navbar a {
+    color: #0f1108;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+.navbar .logo {
+    float: left;
+}
+
+.navbar .navbar-list {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+    margin-left: auto;
+    text-align: center;
+}
+
+.navbar .navbar-item a {
+    color: #0f1108;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .navbar-item a.resume {
+    background-color: #0f1108;
+    color: #fcfdff;
+    transition: outline 0.1s ease;
+}
+
+.navbar .navbar-item a.resume:hover {
+    outline: 3px solid #d6d2d0;
+    outline-offset: 1px;
+}
+
+.navbar .navbar-item a.nav-link:hover {
+    background-color: #efeae8;
+}
+
+.navbar .hamburger {
+    display: none;
+  }
+
+  hr.divider {
+    width: 100%;
+    height: 2px;
+    background-color: #ffd5d1;
+    border: none;
+  }
+
+footer {
+    margin-bottom: 35px;
+}
+
+.footing {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 44px;
+    margin-left: 115px;
+    margin-right: 115px;
+}
+
+footer a {
+    color: #0f1108;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+footer a:hover {
+    color: #b0acab;
+}
+  
+hr.footer-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #efeae8;
+    border: none;
+  }
+
+footer .copyright {
+    margin-top: 35px;
+    font-size: 12px;
+    color: #777;
+}
+
+footer .footer-heading {
+    color: #0f1108;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer .footer-link { 
+   
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    max-width: 545px;
+    margin-top: 35px;
+    margin-bottom: 35px;  
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+footer .footer-link::before {
+    content: "\e5c8";
+    font-family: "Material Symbols Rounded", sans-serif;
+    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 200, 'opsz' 24;
+    font-size: 14px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+body {
+    background-color: #fcf7f5;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+main {
+    margin-top: 90px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-section h1 {
+    font-size: 64px;
+}
+
+.hero-section p {
+    font-size: 32px;
+}
+
+.hero-section h1,
+.hero-section p {
+    text-align: left;
+}
+
+.hero-image img {
+    max-width: 442px;
+    max-height: 442px;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+}
+
+.welcome-arrow {
+    text-align: center;
+    grid-column: 1 / span 2;
+    margin-bottom: 52px;
+}
+
+.welcome-arrow::after {
+    content: "\e5db";
+    font-family: "Material Symbols Rounded", sans-serif;
+    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 200, 'opsz' 24;
+    vertical-align: middle;
+}
+
+.container {
+    max-width: 1440px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 40px;
+  }
+  
+  .project {
+    display: grid;
+    grid-column: 2 / span 10;
+    margin-bottom: 90px;
+  }
+  
+  #top-project {
+    display: grid;
+    grid-column: 2 / span 10;
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+  
+  .title-date {
+    grid-column: 1 / span 2;
+  }
+  
+  .description {
+    grid-column: 3 / span 9;
+    margin-bottom: 33px;
+  }
+  
+  #project-image {
+    grid-column: 1 / span 11;
+    grid-row: 3;
+    border-radius: 20px;
+    max-width: 100%;
+  }
+  
+
+@media screen and (max-width: 800px) {
+    .navbar .navbar-list {
+        display: none;
+      }
+    
+    .navbar .hamburger {
+        display: inline;
+        font-family: "Material Symbols Rounded", sans-serif;
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 200, 'opsz' 40;
+        margin-left: auto;
+        margin-right: 20px;
+      }
+
+    main {
+        margin-left: 20px;
+        margin-right: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-arrow {
+        grid-column: 1;
+    }
+}

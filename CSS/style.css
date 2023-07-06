@@ -226,6 +226,67 @@ main {
     display: none;
   }
 
+  .about-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .about-hero h3 {
+    font-size: 96px;
+    margin-bottom: 10px;
+  }
+  
+  .about-hero img {
+    max-width: 692px;
+    height: auto;
+  }
+  
+  .about {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 165px;
+    margin-right: 165px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    font-size: 16px;
+  }
+  
+  .skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    max-width: 1440px;
+  }
+
+  .skills img {
+    width: 313px;
+    height: 295px;
+  }
+  
+  .card-skills {
+    width: 243px;
+    height: auto;
+    border: 3px solid #FFD5D1;
+    border-radius: 10px;
+    padding: 30px 25px;
+  }
+  
+  .card-skills h4 {
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  
+  .card-skills ul {
+    font-size: 16px;
+    margin: 0px;
+    padding-right: 25px;
+  }
+
 @media screen and (max-width: 600px) {
     .navbar .navbar-list {
         display: none;

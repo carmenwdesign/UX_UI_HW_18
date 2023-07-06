@@ -112,10 +112,6 @@ footer .footer-heading {
     font-weight: bold;
 }
 
-footer .footer-link { 
-   
-}
-
 footer ul {
     display: flex;
     justify-content: space-between;

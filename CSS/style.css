@@ -1,3 +1,12 @@
+.container {
+    max-width: 1440px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 40px;
+  }
+
 .navbar {
     overflow: hidden;
     background-color: hwb(17 96% 1% / 0.35);
@@ -137,63 +146,47 @@ body {
 }
 
 main {
-    margin-top: 90px;
-    margin-left: 50px;
-    margin-right: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    justify-content: center;
-}
-
-.hero-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.hero-section h1 {
+    grid-column: 2 / span 10;
+    margin-top: 90px;
+  }
+  
+  .hero-section {
+    grid-column: 1 / span 8;
+    margin-right: 20px;
+    place-items: center;
+  }
+  
+  .hero-section h1 {
     font-size: 64px;
-}
-
-.hero-section p {
+  }
+  
+  .hero-section p {
     font-size: 32px;
-}
-
-.hero-section h1,
-.hero-section p {
-    text-align: left;
-}
-
-.hero-image img {
+  }
+  
+  .hero-image {
+    grid-column: 9 / span 4;
+    place-items: center;
+  }
+  
+  .hero-image img {
     max-width: 442px;
     max-height: 442px;
-    display: block;
-    margin: 0 auto;
-    height: auto;
-}
-
-.welcome-arrow {
+  }
+  
+  .welcome-arrow {
     text-align: center;
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 12;
+    margin-top: 20px;
     margin-bottom: 52px;
-}
-
-.welcome-arrow::after {
+  }
+  
+  .welcome-arrow::after {
     content: "\e5db";
     font-family: "Material Symbols Rounded", sans-serif;
     font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 200, 'opsz' 24;
     vertical-align: middle;
-}
-
-.container {
-    max-width: 1440px;
-    margin-left: 50px;
-    margin-right: 50px;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 40px;
   }
   
   .project {
@@ -218,15 +211,22 @@ main {
     margin-bottom: 33px;
   }
   
-  #project-image {
+  .project-image {
     grid-column: 1 / span 11;
     grid-row: 3;
     border-radius: 20px;
     max-width: 100%;
   }
-  
 
-@media screen and (max-width: 800px) {
+.mobile-project {
+    display: none;
+  }
+
+#mobile-top-project {
+    display: none;
+  }
+
+@media screen and (max-width: 600px) {
     .navbar .navbar-list {
         display: none;
       }
@@ -239,13 +239,99 @@ main {
         margin-right: 20px;
       }
 
-    main {
+      main {
+        display: grid;
+        grid-column: 1;
+        margin-top: 50px;
+      }
+      
+      .hero-section {
+        grid-column: 1;
+        padding: 20px;
+      }
+      
+      .hero-section h1 {
+        font-size: 64px;
+        margin-bottom: 10px;
+      }
+      
+      .hero-section p {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+      
+      .hero-image {
+        grid-column: 1;
+        text-align: center;
+      }
+      
+      .hero-image img {
+        max-width: 442px;
+        max-height: 442px;
+        height: auto;
+        margin: 0 auto;
+      }
+      
+      .welcome-arrow {
+        text-align: center;
+        grid-column: 1;
+      }
+      
+      .welcome-arrow::after {
+        content: "\e5db";
+        font-family: "Material Symbols Rounded", sans-serif;
+        font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 200, 'opsz' 24;
+        vertical-align: middle;
+      }
+
+      .container {
+        max-width: auto;
         margin-left: 20px;
         margin-right: 20px;
+        display: grid;
         grid-template-columns: 1fr;
-    }
+        grid-gap: 20px;
+      }
 
-    .welcome-arrow {
+      #top-project {
+        display: none;
+      }
+
+      .project {
+        display: none;
+      }
+
+      #mobile-top-project {
+        display: grid;
         grid-column: 1;
+        margin-top: 40px;
+        margin-bottom: 60px;
+      }
+
+      .mobile-project {
+        display: grid;
+        grid-column: 1;
+        margin-bottom: 60px;
+      }
+      
+      .title-date {
+        grid-column: 1;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+      }
+      
+      .description {
+        grid-column: 1;
+        margin-bottom: 15px;
+      }
+      
+      .project-image {
+        grid-column: 1;
+        grid-row: 3;
+        border-radius: 20px;
+        max-width: auto;
+        height: auto;
+      }      
+      
     }
-}
